@@ -79,6 +79,13 @@ function clientLoginInterface(req, res) {
   res.sendfile('resources/client-login.html');
 }
 
+function loadResource(req, res) {
+  var path = req.path;
+  path = path.replace( /[\\]/, '' );
+  path = path.substr( path.lastIndexOf('/') + 1 );
+  res.sendfile('resources/' + path);
+}
+
 function validSharedKey(sk) {
   return c2dBuffers.hasOwnProperty(sk) && 
   d2cBuffers.hasOwnProperty(sk);
@@ -265,6 +272,8 @@ function start() {
   app.all('/devices/login', deviceLogin);
   app.all('/devices/logout', deviceLogout);
   app.post('/devices/poll', devicePoll);
+
+  app.all('/resources/*', loadResource);
   
   app.use(app.router);
   app.use(function (req, res, next) {

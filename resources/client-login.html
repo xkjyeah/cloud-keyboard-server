@@ -22,25 +22,55 @@
   <title>Cloud Keyboard</title>
   <style>
 	
+  main section {
+
+    border-radius: 10px;
+    padding: 3ex;
+    background-color: #FFF;
+    box-shadow: 4px 4px 18px #888;
+  }
+  main {
+    min-width: 500px;
+    width: 60%;
+    margin: 10ex auto 10ex auto;
+    font-size: 150%;
+    font-family: sans-serif;
+  }
+
+  body {
+    background-color: #9CF;
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+  }
+
   #txt_shared_key {
-    width: 40en;
+    width: 40ex;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: sans-serif;
+    font-size: 45px;
+    color: white;
+    text-shadow: 2px 2px 18px #886;
+    margin: 1ex;
   }
   
   </style>
 </head>
 <body>
-  <h1>☁ Cloud Keyboard! 🌈</h1>
+  <main>
+  <h1>☁ Cloud Keyboard! </h1>
+  <section>
 	<form method="POST" action="/clients/login">
-		<p>Start CloudKeyboard on your device and enter the shared-key below:</p>
+		<p>Start CloudKeyboard on your device and enter the shared key below:</p>
 		
 		<p>
       <label for="txt_shared_key">Shared key</label>
       <input type="text" id="txt_shared_key" name="shared-key" />
-		</p>
-    
-    <p>
       <button type="submit">Log in</button>
-    </p>
-	</form>
+		</p>
+  </form>
+  </section>
+  </main>
 </body>
 </html>

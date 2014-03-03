@@ -1,0 +1,120 @@
+
+#in {
+width: 100%;
+min-height: 7ex;
+height: 7ex;
+}
+#preview {
+font-size: 150%;
+min-height: 3ex;
+}
+h1 {
+font-size: 45px;
+font-family: sans-serif;
+color: white;
+text-shadow: 2px 2px 18px #886;
+margin: 1ex;
+}
+
+h2 {
+font-size: 20px;
+}
+
+div.footer {
+font-family: arial, serif;
+font-size: 20px;
+text-align: right;
+}
+
+body {
+    margin: 20px;
+    background-color: #9CF;
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+}
+nav a {
+    color: #FC9;
+    text-decoration: none;
+}
+
+nav, footer {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+section,main {
+    border-radius: 10px;
+    padding: 1ex;
+    background-color: #FFF;
+    box-shadow: 4px 4px 18px #888;
+    font-family: sans-serif;
+}
+main {
+    margin: 2ex 2ex;
+    float: left;
+    width: calc(100% - 6ex);
+}
+section {
+    margin: 0 2ex 0 2ex;
+}
+
+section#modes {
+    width: calc(33% - 6ex);
+    float: left;
+    min-height: 20ex;
+}
+
+section#legend {
+    width: calc(33% - 6ex);
+    float: left;
+    min-height: 20ex;
+}
+
+section#sec_status {
+    width: calc(34% - 6ex);
+    float: left;
+    min-height: 20ex;
+}
+
+section#sec_status div{
+    font-size: 150%;
+}
+
+main {
+    clear: both;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+}
+
+.warn {
+    color: #FF0000;
+}
+
+#legend dt {
+    clear: both;
+}
+#legend dt {
+    display: block;
+    float: left;
+    min-width: 10ex;
+}
+#legend dd {
+    display: block;
+    float: left;
+}
+
+#preview_actual_before, #preview_actual_after {
+    color: #000;
+}
+#preview_inflight {
+    color: #F90
+}
+#preview_events {
+    color: #F00;
+}
+
+.legend_indirect .direct, .legend_indirect .direct + dd {
+    display: none;
+}
